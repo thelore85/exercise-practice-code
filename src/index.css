@@ -1,3 +1,5 @@
+
+/* GOOGLE FONT */
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Comfortaa:wght@300;400;500;600;700&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Shrikhand&display=swap');
 
 :root {
@@ -7,12 +9,10 @@
   --secondary-button: #ffffff;
   
   --background:rgb(255, 255, 255);
-  --background-img: url(./img/code_bg_piqus_web.jpg);
+  --background-img: url(/public/img/gradient_bg_piqus.jpeg);
   --section-bg:rgb(255, 255, 255);
   --section-bg-alt:linear-gradient(30deg, #2f97ff 0%, #21d1db 100%);
-  /* --section-bg-alt:#2f97ff; */
   --section-bg-top:linear-gradient(30deg, rgba(203,0,139,1) 0%, rgb(255, 0, 115) 100%);
-  /* --section-bg-top:#dd0072; */
   
   --box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.192);
   
@@ -20,34 +20,16 @@
   --on-secundary: rgb(250, 250, 250);
   --on-background: rgb(0, 0, 0);
   --on-section-bg: rgb(13, 13, 13);
-  --on-section-bg-alt:rgb(255, 255, 255);
   --on-section-bg-top: rgb(255, 255, 255);
 }
 
-[data-theme="dark"] {
-  --primary:#dd0072;
-  --secondary: #2989fe;
-  
-  --secondary-button: #ffffff;
-  
-  --background: #373737;
-  --background-img: url(./img/code_bg_piqus_dark.jpg);
-  --section-bg:rgb(0, 0, 0);
-  --section-bg-alt:#244a71;
-  --section-bg-top:#ad0059;
-  
-  --box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.414);
-  
-  --on-primary: #ffffff;
-  --on-background: rgba(248, 248, 248, 0.9);
-  --on-section-bg: rgba(248, 248, 248, 0.9);
-  --on-section-bt-alt: rgba(255, 255, 255, 0.7);
-  --on-section-bt-top: rgba(255, 255, 255, 0.7);
+
+* {
+  box-sizing:border-box;
 }
 
 html{
   scroll-behavior: smooth;
-  /* box-sizing:border-box; */
 }
 
 body{
@@ -101,8 +83,6 @@ section{
 }
 
 .wrapper > *{
-  /* padding: 20px; */
-  /* margin-top: 10px; */
   margin-bottom: 20px;
 }
 
@@ -126,15 +106,9 @@ section{
   color: var(--on-primary)
 }
 
-.btn-secondary-alt{
-  background-color: var(--secondary-button);
+.btn-primary:hover{
+  background-color: var(--secondary);
   border-color: var(--secondary);
-  color: var(--secondary)
-}
-
-.btn-secondary-alt:hover{
-  background-color: var(--primary);
-  border-color: var(--primary);
   color: var(--on-primary)
 }
 
@@ -147,4 +121,50 @@ section{
 .btn-secondary:hover{
   background-color: var(--primary);
   border-color: var(--primary);
+  color: var(--on-primary)
 }
+
+
+
+/* //////////////////////////////////////////////
+///////// SECTIONs CSS
+/////////////////////////////////////// */
+
+#hero {
+  z-index:1;
+  position: relative;
+  background-color: var(--section-bg);
+  padding-top: 60px;
+  padding-bottom:60px;
+  min-height: 100vh;
+
+  background-image: var(--background-img);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; 
+}
+
+#hero p{
+  text-align: left;
+}
+
+#hero img{
+  width: 100%;
+}
+
+#hero .btn{
+  margin-right: 15px;
+}
+
+
+@media only screen and (max-width: 767px) {
+  #hero {
+    padding-top: 40px;
+    padding-bottom:40px;
+    min-height: 60vh;
+  }
+}
+
+
+
+

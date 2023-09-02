@@ -1,20 +1,16 @@
 {
-
-  "name": "react-template",
-  "version": "1.0.1",
+  "name": "template-vanilla",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "thelore85",
+  "license": "MIT",
   "dependencies": {
-    "bootstrap": "^5.3.0",
-    "react": "^18.2.0",
-    "react-bootstrap": "^2.8.0",
-    "react-dom": "^18.2.0"
+    "bootstrap": "^5.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.22.6",
@@ -29,8 +25,5 @@
     "svg-url-loader": "^8.0.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
-  },
-  "now": {
-    "builds": [ { "src": "webpack.config.js", "use": "@now/static-build" }]
   }
 }

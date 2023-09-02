@@ -1,5 +1,6 @@
 const path = require('path')
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+
 module.exports ={
   mode: 'development',
 	entry:'./src/index.js',
@@ -12,12 +13,12 @@ module.exports ={
     open: true,
     port: 9000,
     hot: true,
-	},
+	},    
   resolve: {
     modules: [path.resolve(__dirname, 'src'), 'node_modules'],
   },
 	plugins:[
-		new HTMLWebpackPlugin({ template: './src/index.html'})
+		new HTMLWebpackPlugin({ template: './src/index.html',  publicPath: '/'})
 	],
 	module: {
 		rules: [
@@ -32,8 +33,12 @@ module.exports ={
 			},
 			{
 			test:/\.svg$/, //manage .svg file
-			use:[{loader:'svg-url-loader', options:{limiit:10000,}}]
+			use:[{loader:'svg-url-loader', options:{limit:10000,}}]
 			},
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
 		]
 	}
 }
