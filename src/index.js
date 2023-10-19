@@ -40,6 +40,38 @@ function generateExcuse () {
   
 }
 
-button.addEventListener('click', generateExcuse);
+// button.addEventListener('click', generateExcuse);
 
- 
+
+//functions
+const addListItem = () => {
+  list.hidden = true;
+  
+  
+  item.forEach( el => {
+    
+    text.innerHTML += `<li>${el.textContent}</li>`
+    
+    /////////////////////////////////////
+    //  QUESTION: why el (which is an html element), cant' be injected directly in the text.innerHTML???
+    //text.innerHTML += el
+
+    ////////////////////////////////////////////////////////
+    // back up code: other rechnique for adding html elements
+    // let html = document.createElement('li')
+    // html.textContent = el.textContent
+    // text.appendChild(html)
+  })
+}
+
+
+// variables
+const item = document.querySelectorAll('.item')
+const list = document.querySelector('.list')
+const text = document.querySelector('.text')
+const btn = document.getElementById('btn')
+// const item = document.getElementsByClassName('item')
+
+// event listener
+btn.addEventListener('click', addListItem)
+

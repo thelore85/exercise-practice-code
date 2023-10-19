@@ -107,10 +107,7 @@ i {
 ///////// SECTIONs CSS
 /////////////////////////////////////// */
 
-#excuse-generator {
-  display: flex;
-  align-items: center;
-  
+#excuse-generator {  
   position: relative;
   background-color: var(--section-bg);
   padding-top: 60px;
