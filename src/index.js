@@ -54,7 +54,8 @@ const addListItem = () => {
     
     /////////////////////////////////////
     //  QUESTION: why el (which is an html element), cant' be injected directly in the text.innerHTML???
-    //text.innerHTML += el
+    //text.innerHTML += el  
+
 
     ////////////////////////////////////////////////////////
     // back up code: other rechnique for adding html elements
